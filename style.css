@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-layout {
+  height: 80vh;
+  width: 600px;
+  background-color: black;
+  background: linear-gradient(180deg, #d27cf7, #9233ff);
+  position: absolute;
+  top: 0;
+  left: -60px;
+  clip-path: inset(0% 0% 0% 0% round 0px 0px 300px 300px);
+  z-index: -1;
+}
+
+.container {
+  width: 75%;
+  /* height: 600px; */
+  /* border: 1px dashed tomato; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mobile-demo {
+  width: 400px;
+  /* height: 700px; */
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-shadow: 1px 2px 1rem #555;
+  /* border: 1px solid greenyellow; */
+}
+
+.chat-header {
+  height: 100px;
+  background: linear-gradient(180deg, #d27cf7, #9233ff);
+  border-radius: 2rem 2rem 0.5rem 0.5rem;
+  display: flex;
+  /* justify-content: ; */
+  align-items: center;
+  position: relative;
+}
+
+.chat-header::before {
+  content: '';
+  position: absolute;
+  margin: 0 auto;
+  width: 65%;
+  display: flex;
+  background-color: #fff;
+  border: 0.6rem solid #fff;
+  border-radius: 0 0 1rem 1rem;
+  top: 0;
+  left: 15%;
+  /* transform: translate(25%, 25%); */
+}
+
+.chat-header img {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+.chat-header .header-img {
+  width: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-img span {
+  display: inline-block;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.name-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  margin-left: 1.5rem;
+  color: #eee;
+}
+
+.name-status p:nth-child(2) {
+  color: #aaa;
+  font-size: 0.75rem;
+}
+
+.chat-body {
+  padding: 1rem;
+  width: 100%;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.sent {
+  background-color: #e2e2e2;
+  width: 75%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 0.3rem;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+}
+
+.recevied {
+  background-color: #d27cf74b;
+  width: 75%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+.img-sent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+}
+.img-sent img {
+  width: 60px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+}
+
+.offer {
+  background: linear-gradient(to right, #d270fc, #9233ff);
+  width: 75%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0.3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  color: #e2e2e2;
+  font-size: 0.8rem;
+  align-self: flex-start;
+  margin-left: -3rem;
+}
+
+.price {
+  font-size: 1.1rem;
+}
+
+.offer .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.mobile-send-message {
+  /* border: 1px solid tomato; */
+  padding: 1rem;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-send-message div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #36145e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.booking {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
+  flex-direction: column;
+  text-align: left;
+}
+
+.booking h1 {
+  color: #36145e;
+  padding: 1rem;
+}
+
+.booking p {
+  color: #37145e62;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7rem;
+}
+
+/* @media (max-width: 966px) {
+  .container {
+    width: 100%;
+    justify-content: space-between;
+  }
+} */
+
+@media (max-width: 950px) {
+  .container {
+    margin-top: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .background-layout {
+    left: -20rem;
+    top: -15rem;
+  }
+  .booking {
+    padding: 2rem 1rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .booking h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
